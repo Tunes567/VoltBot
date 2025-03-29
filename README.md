@@ -26,4 +26,4 @@ Professional volume generation bot for Solana tokens. Create organic volume, man
 
 ## Website
 
-Visit our website at [https://yourusername.github.io/voltbot](https://yourusername.github.io/voltbot) 
+Visit our website at [https://tunes567.github.io/VoltBot](https://tunes567.github.io/VoltBot) 
