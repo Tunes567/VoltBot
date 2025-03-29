@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltBot - Advanced Solana Volume Bot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <script src="https://unpkg.com/@solana/spl-token@latest/lib/index.iife.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">
+                    <i class="fas fa-bolt logo-icon"></i>
+                    <span class="logo-text">VoltBot</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#dexes">Supported DEXes</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="logo" style="margin-bottom: 2rem; justify-content: center;">
+                <i class="fas fa-bolt logo-icon"></i>
+                <span class="logo-text" style="font-size: 3.5rem;">VoltBot</span>
+            </div>
+            <p class="subtitle">The most powerful volume generation bot for Solana tokens. Create organic volume, manage maker orders, and optimize your token's performance across multiple DEXes.</p>
+            <div class="cta-buttons">
+                <a href="#pricing" class="cta-primary">Get Started</a>
+                <a href="https://t.me/VoltBotVolume" class="cta-secondary">Join @VoltBotVolume</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-family: 'Space Grotesk', sans-serif;">Bot Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h3>Volume Generation</h3>
+                    <p>Create organic trading volume with our advanced algorithm that generates tax-free transactions across multiple DEXes.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-exchange-alt feature-icon"></i>
+                    <h3>Maker Orders</h3>
+                    <p>Set up and manage maker orders to improve liquidity and reduce trading fees across supported DEXes.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-wallet feature-icon"></i>
+                    <h3>Multi-Wallet Support</h3>
+                    <p>Manage multiple wallets simultaneously for efficient volume distribution and transaction automation.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-plug feature-icon"></i>
+                    <h3>DEX Integration</h3>
+                    <p>Seamlessly integrate with popular Solana DEXes including Raydium V2, Meteora, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users feature-icon"></i>
+                    <h3>Pre-Configured Wallets</h3>
+                    <p>Get up to 1,000 pre-configured wallets with optimized settings for maximum volume generation and efficiency.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>High Performance</h3>
+                    <p>99.9% uptime guarantee with automatic error recovery and real-time transaction monitoring for reliable volume generation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-family: 'Space Grotesk', sans-serif;">Advanced Volume Bot</h2>
+            <div class="pricing-container">
+                <div class="code-preview">
+                    <pre>
+====Advance Solana Volume + Maker Bot====
+Supports: Raydium V2, Raydium CPMM, Meteora, 
+FluxBeam, Dexlab, 1Intro, Pump.Fun, Moonshot
+================================
+
+MASTER ADDRESS:
+TOKEN:
+PER ACCOUNT FUND:
+MIN RANGE:          || MAX RANGE:
+NUMBER OF CYCLE:
+
+================================
+1: Generate Accounts
+2: View Balances of Accounts
+3: Fund Accounts
+4: Send Volume only
+5: Send Volume only + makers + Rank
+6: Refund from accounts to Master Wallet
+
+Choose any option: 1 - 6:</pre>
+                </div>
+                <div class="pricing-content">
+                    <div class="pricing-card">
+                        <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">Lifetime Access</h3>
+                        <div class="price" style="font-size: 3rem; margin-bottom: 2rem;">4 SOL</div>
+                        <ul style="margin-bottom: 2rem;">
+                            <li>✨ Full Bot Access</li>
+                            <li>🚀 Up to 1,000 Wallets</li>
+                            <li>🔧 Setup Instructions</li>
+                            <li>💬 24/7 Priority Support</li>
+                            <li>🔄 Free Updates</li>
+                            <li>⚡ Multiple DEX Support</li>
+                        </ul>
+                        <button class="buy-button" onclick="showPaymentForm('Lifetime Access', 4)" style="font-size: 1.2rem;">
+                            Get Started Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-form" id="paymentForm" style="display: none;">
+                <h3 style="text-align: center; margin-bottom: 2rem; color: #00FF9D;">Complete Your Purchase</h3>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    <div class="wallet-connect">
+                        <button type="button" id="connectWallet">
+                            <i class="fas fa-wallet"></i>
+                            Connect Wallet
+                        </button>
+                    </div>
+                    <div class="form-group">
+                        <label for="plan">Selected Plan</label>
+                        <input type="text" id="plan" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price (SOL)</label>
+                        <input type="text" id="price" readonly>
+                    </div>
+                    <div class="payment-address">
+                        <p>Send payment to:</p>
+                        <div class="qr-container" id="qrCode"></div>
+                        <code id="paymentAddress">3P7SfiZJHJRRoduexPZgvZHVoZWMZLXKmh3Rk9VzgaST</code>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">
+                            Click address to copy or scan QR code
+                        </p>
+                    </div>
+                    <div class="tx-verification" id="txVerification">
+                        <h4 style="color: #00FF9D; margin-bottom: 1rem;">Verify Your Payment</h4>
+                        <p style="color: #888; margin-bottom: 1rem;">Please enter your transaction ID to verify the payment:</p>
+                        <input type="text" id="txId" placeholder="Enter Transaction ID" required>
+                        <button type="button" class="buy-button" onclick="verifyTransaction()">Verify Transaction</button>
+                    </div>
+                    <div class="verification-steps">
+                        <h4 style="color: #00FF9D; margin-bottom: 1rem;">Next Steps:</h4>
+                        <ol>
+                            <li>Send the exact amount of SOL to the address above</li>
+                            <li>Copy your transaction ID from your wallet</li>
+                            <li>Join our main channel: <strong>@VoltBotVolume</strong></li>
+                            <li>Send your transaction ID to <strong>@VoltBotVolume</strong> to receive:</li>
+                            <li style="padding-left: 2rem; font-size: 0.9rem; color: #666;">• Bot Files & Setup Guide</li>
+                            <li style="padding-left: 2rem; font-size: 0.9rem; color: #666;">• Support & Updates</li>
+                            <li style="padding-left: 2rem; font-size: 0.9rem; color: #666;">• Access to Wallet Configuration</li>
+                        </ol>
+                    </div>
+                    <button type="submit" class="buy-button">Complete Purchase</button>
+                    <div class="loading">
+                        <i class="fas fa-spinner"></i> Processing...
+                    </div>
+                    <div class="success-message">
+                        Payment successful! Check your email for instructions.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="supported-dexes" id="dexes">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-family: 'Space Grotesk', sans-serif;">Supported DEXes</h2>
+            <div class="dex-grid">
+                <div class="dex-card">
+                    <i class="fas fa-exchange-alt dex-icon"></i>
+                    <h4>Raydium V2</h4>
+                    <p>Latest AMM with enhanced features</p>
+                </div>
+                <div class="dex-card">
+                    <i class="fas fa-chart-bar dex-icon"></i>
+                    <h4>Raydium CPMM</h4>
+                    <p>Constant Product Market Maker</p>
+                </div>
+                <div class="dex-card">
+                    <i class="fas fa-water dex-icon"></i>
+                    <h4>Meteora</h4>
+                    <p>Advanced liquidity pools</p>
+                </div>
+                <div class="dex-card">
+                    <i class="fas fa-bolt dex-icon"></i>
+                    <h4>FluxBeam</h4>
+                    <p>High-performance trading</p>
+                </div>
+                <div class="dex-card">
+                    <i class="fas fa-flask dex-icon"></i>
+                    <h4>Dexlab</h4>
+                    <p>Professional trading platform</p>
+                </div>
+                <div class="dex-card">
+                    <i class="fas fa-rocket dex-icon"></i>
+                    <h4>1Intro</h4>
+                    <p>Innovative trading solutions</p>
+                </div>
+                <div class="dex-card">
+                    <i class="fas fa-fire dex-icon"></i>
+                    <h4>Pump.Fun</h4>
+                    <p>Community-driven platform</p>
+                </div>
+                <div class="dex-card">
+                    <i class="fas fa-moon dex-icon"></i>
+                    <h4>Moonshot</h4>
+                    <p>Next-gen trading experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="chat-support">
+        <button class="chat-button" onclick="window.open('https://t.me/VoltBotVolume', '_blank')">
+            <span class="chat-icon">��</span>
+            Contact @VoltBotVolume
+        </button>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Volume Bot. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://t.me/VoltBotVolume" target="_blank">Telegram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
